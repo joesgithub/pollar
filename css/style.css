@@ -7,13 +7,214 @@ body {
   background: #bdc3c7;
 }
 
+header {
+  height: 56px;
+  background: #2c2c2c;
+  z-index: 100;
+  position: fixed;
+  width: 100%;
+}
+
+header #sort {
+  width: 46px;
+  position: absolute;
+  top: 9px;
+  left: 16px;
+  height: 36px;
+  background-image: url(../images/sort.png);
+  background-repeat: none;
+  text-indent: -999px;
+}
+
+header .search {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 72px;
+}
+
+header .search .searchbox {
+  height: 34px;
+  font-size: 18px;
+  background-image: url('../images/searchicon.jpg');
+  background-repeat: no-repeat;
+  background-position: 95% center;
+  border: none;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  padding: 0 16px;
+}
+
+header .search .searchbox:focus,
+header .search .searchbox:active {
+  background-image: none;
+}
+
+header .logo {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  margin-left: -30px;
+}
+
+header .profilepic {
+  position: absolute;
+  top: 10px;
+  right: 200px;
+}
+
+header #profile {
+  width: 154px;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  padding: 5px 15px 5px 15px;
+  height: 26px;
+  background-image: url(../images/user_dropdown.png);
+  background-repeat: none;
+}
+
+.dropdown {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    margin: auto;
+    display: block;
+    position: relative;
+    color: #7f8c8d;
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #7f8c8d;
+  line-height: 22px;
+}
+
+.dropdown ul {
+    display: none;
+    margin: 7px 0 0 -16px;
+    width: 184px;
+    z-index: 101;
+    font-weight: 600;
+}
+
+#sort ul {
+  margin: 12px 0 0 -1px;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    padding: 5px 15px 5px 15px;
+    background: #ecf0f1;
+    margin-left: 1px;
+    white-space: nowrap;
+}
+
+ul li a.logout {
+   border-top: 1px solid #7f8c8d;
+}
+
+#sort ul li a{
+  text-indent: 0;
+}
+
+ul li a:hover {
+background: #7E93A8;
+color: #fff;
+}
+
+.dropdown:hover ul {
+    display: block;
+    position: absolute;
+}
+
+.dropdown:hover li {
+    float: none;
+    font-size: 11px;
+}
+
+li:hover a {
+  background: #7E93A8;
+}
+
+.dropdown:hover ul li a:hover {
+    background: #7E93A8;
+}
+
 #container {
   margin: 0 auto;
   background: #bdc3c7;
-  padding: 5px;
+  padding: 66px 5px 5px 5px;
   margin-bottom: 20px;
-  border-radius: 5px;
   clear: both;
+}
+
+/**** Corner stamp ****/
+
+#corner-stamp {
+  width: 208px;
+  min-height: 250px;
+  padding: 10px;
+  background: #bdc3c7;
+  color: #fff;
+  border: dashed 3px #7f8c8d;
+}
+
+form #question {
+  height:100px;
+  max-height:100px;
+  width:100%;
+  max-width:100%;
+  resize: none;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: #bdc3c7;
+  border: solid 2px #7f8c8d;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.question label {
+  color: #7f8c8d;
+  font-size: 14px;
+  margin-top: 10px;
+  display: block;
+}
+
+.question input {
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  background-color: #bdc3c7;
+  border: solid 2px #7f8c8d;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  overflow: hidden;
+  display: block;
+}
+
+form #image {
+  font-size: 18px;
+}
+
+form #url {
+  width: 100%;
+}
+
+.question input[type=submit] {
+  background: #ecf0f1;
+  border: solid 1px #7f8c8d;
+  margin-top: 10px;
+}
+
+.question input[type=submit]:hover{
+  cursor: pointer;
 }
 
 .centered { margin: 0 auto; }
@@ -25,7 +226,6 @@ body {
   background: #ecf0f1;
   font-size: 11px;
   line-height: 1.4em;
-  float: left;
   border-top: solid 8px #2980b9;
 }
 
@@ -73,4 +273,21 @@ body {
 
 .box ol li p {
   font-weight: 400;
+}
+
+
+
+/*  * * * *Clear Fix* * * * * */
+.cf:before,
+.cf:after {
+  content: "";
+  display: block; 
+}
+
+.cf:after {
+  clear: both;  
+}
+
+.cf {
+  zoom: 1; /* for old ie (trigger has layout) don't really need */  
 }

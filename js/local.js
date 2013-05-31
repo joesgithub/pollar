@@ -2,6 +2,7 @@
 
 $(document).ready(function(){
 
+
 //=================================================masonry options
 	
 var $container = $('#container');
@@ -18,9 +19,10 @@ $container.imagesLoaded(function(){
 //=================================================prepend
 
 
-$('button').click(function(){
+$('input[type=submit]').click(function(){
   var $boxes = '<article class="box"><a><h4 class="question">QUESTION</h4></a><img src="image.jpg" width="240" /><div class="meta"><p class="answers"># Answers</p><p class="enjoys"># Enjoys</p><time datetime="DATE">DATE</time></div><ol class="comments"><li><h5>NAME</h5><p>COMMENT</p></li><li><h5>NAME</h5><p>COMMENT</p></li><li class="onhover"><h5>USER</h5><p>COMMENTBOX</p></li></ol></article>';
-  $('#container').prepend( $boxes ).masonry( 'reload' );
+  $('#corner-stamp').after( $boxes );
+  $('#container').masonry( 'reload' );
 });
 
 
